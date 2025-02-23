@@ -12,7 +12,7 @@ public class StoreTest {
     private Store store;
     @BeforeEach
     public void setUp() {
-        store = new Store("Techno Gijón", "José Romero", "123456789");
+        store = new Store("Techno Gijón", "José Romero", "12345678A");
     }
     
 

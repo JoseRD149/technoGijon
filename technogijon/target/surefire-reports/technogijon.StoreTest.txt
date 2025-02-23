@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: technogijon.StoreTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in technogijon.StoreTest
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.074 s <<< FAILURE! - in technogijon.StoreTest
+technogijon.StoreTest.testStoreNameOwnerAndTaxId  Time elapsed: 0.014 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: The store's tax ID should be 12345678A. ==> expected: <123456789> but was: <12345678A>
+	at technogijon.StoreTest.testStoreNameOwnerAndTaxId(StoreTest.java:76)
+
