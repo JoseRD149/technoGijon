@@ -12,7 +12,7 @@ public class StoreTest {
     private Store store;
     @BeforeEach
     public void setUp() {
-        store = new Store("Techno Gijón", "José Romero", "12345678A");
+        store = new Store("Techno Gijón", "José Romero", "123456789");
     }
     
 
@@ -73,6 +73,6 @@ public void testStoreNameOwnerAndTaxId() {
     // Verificar que el nombre y propietario son correctos
     assertEquals("Techno Gijón", store.getName(), "The store's name should be Techno Gijón.");
     assertEquals("José Romero", store.getOwner(), "The store's owner should be José Romero.");
-    assertEquals("123456789", store.getTaxId(), "The store's tax ID should be 12345678A.");
+    assertEquals("123456789", store.getTaxId(), "The store's tax ID should be 123456789.");
 }
 }
