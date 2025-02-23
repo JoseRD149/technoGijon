@@ -17,4 +17,8 @@ public class Store {
     public List<Computer> listComputers() {
         return computers;  // Devuelve la lista de computadores
     }
+
+    public void removeComputer(String brand) {
+        computers.removeIf(computer -> computer.getBrand().equals(brand));  // Elimina el computador con la marca dada
+    }
 }
