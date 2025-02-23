@@ -21,4 +21,14 @@ public class Store {
     public void removeComputer(String brand) {
         computers.removeIf(computer -> computer.getBrand().equals(brand));  // Elimina el computador con la marca dada
     }
+
+    public Computer findComputerByBrand(String brand) {
+        for (Computer computer : computers) {
+            if (computer.getBrand().equals(brand)) {
+                return computer;  // Retorna el computador si coincide la marca
+            }
+        }
+        return null;  // Retorna null si no se encuentra el computador
+    }
+    
 }
