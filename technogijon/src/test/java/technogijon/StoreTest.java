@@ -68,7 +68,7 @@ public void testListComputers() {
 @Test
 public void testStoreNameOwnerAndTaxId() {
     // Crear una tienda con nombre y propietario
-    Store store = new Store("Techno Gijón", "José Romero","12345678A");
+    Store store = new Store("Techno Gijón", "José Romero","123456789");
 
     // Verificar que el nombre y propietario son correctos
     assertEquals("Techno Gijón", store.getName(), "The store's name should be Techno Gijón.");
