@@ -10,11 +10,11 @@ import java.util.List;
 public class StoreTest {
 
     private Store store;
-
     @BeforeEach
     public void setUp() {
-        store = new Store(); 
+        store = new Store("Techno Gijón", "José Romero", "123456789");
     }
+    
 
     @Test
     public void testAddComputer() {
