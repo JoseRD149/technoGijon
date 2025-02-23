@@ -11,24 +11,24 @@ public class Store {
     }
 
     public void addComputer(Computer computer) {
-        computers.add(computer);  // Agrega el computador a la lista
+        computers.add(computer);  
     }
 
     public List<Computer> listComputers() {
-        return computers;  // Devuelve la lista de computadores
+        return computers;  
     }
 
     public void removeComputer(String brand) {
-        computers.removeIf(computer -> computer.getBrand().equals(brand));  // Elimina el computador con la marca dada
+        computers.removeIf(computer -> computer.getBrand().equals(brand)); 
     }
 
     public Computer findComputerByBrand(String brand) {
         for (Computer computer : computers) {
             if (computer.getBrand().equals(brand)) {
-                return computer;  // Retorna el computador si coincide la marca
+                return computer;  
             }
         }
-        return null;  // Retorna null si no se encuentra el computador
+        return null;  
     }
     
 }

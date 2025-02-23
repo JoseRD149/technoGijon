@@ -13,18 +13,15 @@ public class StoreTest {
 
     @BeforeEach
     public void setUp() {
-        store = new Store();  // Initialize the store before each test
+        store = new Store(); 
     }
 
     @Test
     public void testAddComputer() {
-        // Step 1: Create a computer
         Computer computer = new Computer("Dell", 16, "Intel i7", "Windows 10", 1200.00);
 
-        // Step 2: Add the computer to the store
         store.addComputer(computer);
 
-        // Step 3: Verify that the computer was added
         List<Computer> computers = store.listComputers();
         assertEquals(1, computers.size(), "The store should have 1 computer.");
         assertEquals("Dell", computers.get(0).getBrand(), "The added computer should be from the brand Dell.");
@@ -32,36 +29,41 @@ public class StoreTest {
 
     @Test
 public void testRemoveComputer() {
-    // Step 1: Create a computer
     Computer computer = new Computer("Dell", 16, "Intel i7", "Windows 10", 1200.00);
 
-    // Step 2: Add the computer to the store
     store.addComputer(computer);
 
-    // Step 3: Verify that the computer was added
     assertEquals(1, store.listComputers().size(), "The store should have 1 computer.");
 
-    // Step 4: Remove the computer by its brand
     store.removeComputer("Dell");
 
-    // Step 5: Verify that the computer was removed
     assertEquals(0, store.listComputers().size(), "The store should have 0 computers after removal.");
 }
 
 @Test
 public void testFindComputerByBrand() {
-    // Step 1: Create a computer
     Computer computer = new Computer("Dell", 16, "Intel i7", "Windows 10", 1200.00);
 
-    // Step 2: Add the computer to the store
     store.addComputer(computer);
 
-    // Step 3: Find the computer by its brand
     Computer foundComputer = store.findComputerByBrand("Dell");
 
-    // Step 4: Verify that the found computer is the one with the correct brand
     assertNotNull(foundComputer, "The computer should be found.");
     assertEquals("Dell", foundComputer.getBrand(), "The found computer should be from the brand Dell.");
+}
+@Test
+public void testListComputers() {
+    Computer computer1 = new Computer("Dell", 16, "Intel i7", "Windows 10", 1200.00);
+    Computer computer2 = new Computer("HP", 8, "Intel i5", "Windows 10", 800.00);
+
+    store.addComputer(computer1);
+    store.addComputer(computer2);
+
+    List<Computer> computersList = store.listComputers();
+
+    assertEquals(2, computersList.size(), "The store should have 2 computers.");
+    assertTrue(computersList.contains(computer1), "The store should contain the Dell computer.");
+    assertTrue(computersList.contains(computer2), "The store should contain the HP computer.");
 }
 
 }

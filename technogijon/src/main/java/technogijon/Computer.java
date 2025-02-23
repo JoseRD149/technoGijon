@@ -16,7 +16,6 @@ public class Computer {
         this.price = price;
     }
 
-    // Getters
     public String getBrand() {
         return brand;
     }
