@@ -47,4 +47,21 @@ public void testRemoveComputer() {
     // Step 5: Verify that the computer was removed
     assertEquals(0, store.listComputers().size(), "The store should have 0 computers after removal.");
 }
+
+@Test
+public void testFindComputerByBrand() {
+    // Step 1: Create a computer
+    Computer computer = new Computer("Dell", 16, "Intel i7", "Windows 10", 1200.00);
+
+    // Step 2: Add the computer to the store
+    store.addComputer(computer);
+
+    // Step 3: Find the computer by its brand
+    Computer foundComputer = store.findComputerByBrand("Dell");
+
+    // Step 4: Verify that the found computer is the one with the correct brand
+    assertNotNull(foundComputer, "The computer should be found.");
+    assertEquals("Dell", foundComputer.getBrand(), "The found computer should be from the brand Dell.");
+}
+
 }
