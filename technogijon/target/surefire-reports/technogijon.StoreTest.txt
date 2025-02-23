@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: technogijon.StoreTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s - in technogijon.StoreTest
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! - in technogijon.StoreTest
+technogijon.StoreTest.testRemoveComputer  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method removeComputer(String) is undefined for the type Store
+
+	at technogijon.StoreTest.testRemoveComputer(StoreTest.java:45)
+
